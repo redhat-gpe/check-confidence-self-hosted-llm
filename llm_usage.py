@@ -5,7 +5,7 @@ from langchain.prompts import PromptTemplate
 from langchain.evaluation import load_evaluator
 from langchain.embeddings import HuggingFaceEmbeddings
 
-INFERENCE_SERVER_URL = "http://VAR_MODEL.VAR_NAMESPACE.svc.cluster.local"
+INFERENCE_SERVER_URL = "http://VAR_MODEL-predictor.VAR_NAMESPACE.svc.cluster.local:8080"
 MAX_NEW_TOKENS = 512
 TOP_P = 0.95
 TEMPERATURE = 0.01
