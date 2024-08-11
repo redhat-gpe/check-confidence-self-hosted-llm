@@ -5,7 +5,7 @@ from langchain.prompts import PromptTemplate
 from langchain.evaluation import load_evaluator
 from langchain.embeddings import HuggingFaceEmbeddings
 
-INFERENCE_SERVER_URL = "http://VAR_MODEL-predictor.VAR_NAMESPACE.svc.cluster.local:8080"
+INFERENCE_SERVER_URL = "http://VAR_MODEL_NAME-predictor.VAR_NAMESPACE.svc.cluster.local:8080"
 MAX_NEW_TOKENS = 512
 TOP_P = 0.95
 TEMPERATURE = 0.01
@@ -15,7 +15,7 @@ def infer_with_template(input_text, template):
     llm = VLLMOpenAI(
         openai_api_key="EMPTY",
         openai_api_base= f"{INFERENCE_SERVER_URL}/v1",
-        model_name="VAR_MODEL",
+        model_name="VAR_MODEL_NAME",
         max_tokens=MAX_NEW_TOKENS,
         top_p=TOP_P,
         temperature=TEMPERATURE,
